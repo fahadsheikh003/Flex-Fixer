@@ -1,6 +1,6 @@
 # Flex-Fixer
 
-This is a Chrome extension that allows you to view your marks in flex student portal easily. Contributions and recommendations are welcome.
+This is a Chrome extension that allows you to view your Grand Total Marks in flex student portal easily. Contributions and recommendations are welcome.
 
 ## Installation Procedure
 Follow this installation procedure to get started with the extension. The installation is dependency free and only requires Chrome.
