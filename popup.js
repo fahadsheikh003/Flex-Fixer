@@ -3,13 +3,22 @@ const form = document.getElementById("control-row");
 form.addEventListener("submit", handleFormSubmit);
 
 async function handleFormSubmit(event) {
-  let url = new URL("https://flexstudent.nu.edu.pk");
-  const cookie = await getCookie(url.hostname);
-  // alert(cookie);
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  let url;
+  if (tab?.url) {
+    try {
+      url = new URL(tab.url);
+      if (url.hostname !== "flexstudent.nu.edu.pk") {
+        alert("Please open the FlexStudent website first.");
+        return;
+      }
+    } catch {}
+  }
+
+  // let url = new URL("https://flexstudent.nu.edu.pk");
+  const cookie = await getCookie(url.hostname);
 
   chrome.scripting.executeScript({ target: { tabId: tab.id }, function: doneStuff, args: [cookie] });
-
 }
 
 async function getCookie(domain) {
@@ -28,6 +37,10 @@ async function getCookie(domain) {
 }
 
 async function doneStuff(cookie) {
+  if (!window.location.href.includes("Student/StudentMarks")) {
+    alert("Please change path to Student/StudentMarks");
+  }
+
   const getTd = (className, id) => {
     const td = document.createElement('td');
     td.classList.add("text-center");
