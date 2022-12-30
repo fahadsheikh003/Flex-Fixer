@@ -7,6 +7,6 @@ Follow this installation procedure to get started with the extension. The instal
 
 * Clone this repository.
 * Unzip the folder.
-* Visit chrome://extensions/.
+* Visit <p>chrome://extensions/.</p>
 * Enable developer mode.
 * Click on Load unpacked and select the unzipped folder.
