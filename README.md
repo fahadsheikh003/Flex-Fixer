@@ -2,6 +2,9 @@
 
 This is a Chrome extension that allows you to view your Grand Total Marks in flex student portal easily. Contributions and recommendations are welcome.
 
+## Status
+* This extension has stopped working bacause the issue has been patched
+
 ## Installation Procedure
 Follow this installation procedure to get started with the extension. The installation is dependency free and only requires Chrome.
 
