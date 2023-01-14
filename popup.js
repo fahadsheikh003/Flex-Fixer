@@ -39,6 +39,11 @@ async function getCookie(domain) {
 async function doneStuff(cookie) {
   if (!window.location.href.includes("Student/StudentMarks")) {
     alert("Please change path to Student/StudentMarks");
+    return;
+  }
+  if (cookie === null) {
+    alert("An error occured");
+    return;
   }
 
   const getTd = (className, id) => {
@@ -78,49 +83,8 @@ async function doneStuff(cookie) {
       });
     });
 
-    // $('.sum_table').each(function (t) {
-    //     $(this).find("." + temp).each(function () {
-    //         $(this).find(".totalColweightage").each(function () {
-    //             if ($(this).text() != "") {
-    //                 tempGrandTotal += parseFloat($(this).text());
-    //             }
-    //         });
-    //         if ((!isNaN(tempGrandTotal) && tempGrandTotal != 0)) {
-    //             $("#GrandtotalColMarks_" + id).html(tempGrandTotal.toFixed(2));
-    //         }
-    //     });
-    // });
-
     var sem = document.getElementById("SemId");
     var SemID = sem.options[sem.selectedIndex].value;
-
-    // $.ajax
-    //     ({
-    //         type: "POST",
-    //         url: "https://flexstudent.nu.edu.pk/Student/GetClassAvg",
-    //         headers: {
-    //             Accept: "*/*",
-    //             "User-Agent": navigator.userAgent,
-    //             Cookie: cookie
-    //         },
-    //         data: {
-    //             CourseId: id,
-    //             SemID: SemID
-    //         },
-    //         success: function (data) {
-    //             for (var i = 0; i < data.length; i++) {
-    //                 $("#GrandtotalClassAvg_" + id).html(data[i].CLASS_AVG.toFixed(2));
-    //                 $("#GrandtotalClassMax_" + id).html(data[i].CLASS_MAX.toFixed(2));
-    //                 $("#GrandtotalClassMin_" + id).html(data[i].CLASS_MIN.toFixed(2));
-    //                 $("#GrandtotalClassStdDev_" + id).html(data[i].CLASS_STD.toFixed(2));
-    //                 $("#GrandtotalObtMarks_" + id).html(data[i].TOT_WEIGHT.toFixed(2));
-    //             }
-
-    //         },
-    //         error: function (e) {
-
-    //         }
-    //     });
 
     let headersList = {
       "Accept": "*/*",
