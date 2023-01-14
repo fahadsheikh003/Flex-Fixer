@@ -19,6 +19,9 @@ Follow this installation procedure to get started with the extension. The instal
 </p>
 
 * And Boom! all your marks are back where they should be.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/87650614/212480136-95e19102-971e-4cbb-8b88-bdec3748bbb4.jpg" />
+</p>
 
 ## Disclaimer
 This code is provided for educational purposes only. The code is not intended to be used for malicious purposes or to gain unauthorized access to any system. The author of this code takes no responsibility for any misuse of the code. Use at your own risk. 
